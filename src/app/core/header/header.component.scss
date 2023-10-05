@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .home {
+    font-weight: bold;
+  }
+
+  &, nav {
+    gap: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

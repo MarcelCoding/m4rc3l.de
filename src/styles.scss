@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import "theme", "vars";
+
+@include theme(
+  $c-secondary: lighten(#000, 15%),
+  $c-secondary-l: lighten(#181818, 15%),
+  $c-secondary-ll: lighten(#212121, 15%),
+  $c-secondary-d: lighten(#0c1016, 15%),
+);
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 0 3rem;
+}
+
+
+h1, h2, h3, h4 {
+  position: relative;
+
+  &::before {
+    color: $c-primary;
+    margin-right: 0.5rem;
+    position: absolute;
+    right: 100%;
+  }
+
+
+  &, &:before {
+    font-family: $f-family-mono;
+    font-weight: 500;
+  }
+}
+
+h1::before {
+  content: '#';
+}
+
+h2::before {
+  content: '##';
+}
+
+h3::before {
+  content: '###';
+}
+
+h4::before {
+  content: '####';
+}
+
+.typography code {
+  background-color: $c-secondary-l;
+}

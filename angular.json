@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "m4rc3l.de": {
+    "m4rc3l": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/m4rc3l.de",
+            "outputPath": "dist/m4rc3l",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -27,12 +27,28 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/id_ed25519.pub",
+              "src/0x3DF81C6A.asc"
             ],
             "styles": [
+              "node_modules/@fontsource/dm-sans/400.css",
+              "node_modules/@fontsource/dm-sans/400-italic.css",
+              "node_modules/@fontsource/dm-sans/700.css",
+              "node_modules/@fontsource/dm-sans/700-italic.css",
+              "node_modules/@fontsource/dm-mono/400.css",
+              "node_modules/@fontsource/dm-mono/400-italic.css",
+              "node_modules/@fontsource/dm-mono/500.css",
+              "node_modules/@fontsource/dm-mono/500-italic.css",
+              "node_modules/@feel/style/main.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/@feel/style/global"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -65,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "m4rc3l.de:build:production"
+              "browserTarget": "m4rc3l:build:production"
             },
             "development": {
-              "browserTarget": "m4rc3l.de:build:development"
+              "browserTarget": "m4rc3l:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "m4rc3l.de:build"
+            "browserTarget": "m4rc3l:build"
           }
         },
         "test": {
@@ -90,12 +106,28 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/id_ed25519.pub",
+              "src/0x3DF81C6A.asc"
             ],
             "styles": [
+              "node_modules/@fontsource/dm-sans/400.css",
+              "node_modules/@fontsource/dm-sans/400-italic.css",
+              "node_modules/@fontsource/dm-sans/700.css",
+              "node_modules/@fontsource/dm-sans/700-italic.css",
+              "node_modules/@fontsource/dm-mono/400.css",
+              "node_modules/@fontsource/dm-mono/400-italic.css",
+              "node_modules/@fontsource/dm-mono/500.css",
+              "node_modules/@fontsource/dm-mono/500-italic.css",
+              "node_modules/@feel/style/main.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/@feel/style/global"
+              ]
+            }
           }
         }
       }

@@ -1,0 +1,51 @@
+@import "vars";
+
+
+.control {
+::ng-deep input {
+  background-color: $c-secondary-l!important;
+  &:hover {
+    background-color: $c-secondary-ll!important;
+  }
+}
+}
+
+tr {
+  &.green1,
+  &.green2,
+  &.yellow1,
+  &.yellow2,
+  &.orange,
+  &.red {
+    color: $c-secondary;
+  }
+
+  &.green1 {
+    background-color: rgba(187 238 187 / 75%);
+  }
+
+  &.green2 {
+    background-color: rgba(204 255 204 / 75%);
+  }
+
+  &.yellow1 {
+    background-color: rgba(255 255 187 / 75%);
+  }
+
+  &.yellow2 {
+    background-color: rgba(255 238 170 / 75%);
+  }
+
+  &.orange {
+    background-color: rgba(255 221 170 / 75%);
+  }
+
+  &.red {
+    background-color: rgba(255 170 170 / 75%);
+  }
+
+  td {
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+  }
+}
