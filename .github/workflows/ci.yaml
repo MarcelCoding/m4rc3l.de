@@ -24,8 +24,8 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: presence
-          path: dist
+          name: m4rc3l.de
+          path: dist/m4rc3l
 
   docker:
     needs: [ build ]
@@ -39,7 +39,7 @@ jobs:
 
       - uses: actions/download-artifact@v3
         with:
-          name: presence
+          name: m4rc3l.de
           path: dist
 
       - name: Docker meta
