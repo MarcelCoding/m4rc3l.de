@@ -25,7 +25,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: m4rc3l.de
-          path: dist/m4rc3l
+          path: dist
 
   docker:
     needs: [ build ]
