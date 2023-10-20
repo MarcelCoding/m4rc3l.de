@@ -2,12 +2,13 @@
 
 
 .control {
-::ng-deep input {
-  background-color: $c-secondary-l!important;
-  &:hover {
-    background-color: $c-secondary-ll!important;
+  ::ng-deep input {
+    background-color: $c-secondary-l !important;
+
+    &:hover {
+      background-color: $c-secondary-ll !important;
+    }
   }
-}
 }
 
 tr {

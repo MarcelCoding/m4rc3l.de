@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ToolsRoutingModule } from './tools-routing.module';
-import { ToolsComponent } from './tools.component';
+import {ToolsRoutingModule} from './tools-routing.module';
+import {ToolsComponent} from './tools.component';
 
 
 @NgModule({
@@ -14,4 +14,5 @@ import { ToolsComponent } from './tools.component';
     ToolsRoutingModule
   ]
 })
-export class ToolsModule { }
+export class ToolsModule {
+}

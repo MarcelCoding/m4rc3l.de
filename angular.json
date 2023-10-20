@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/m4rc3l",
+            "outputPath": "dist/m4rc3l/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -129,6 +129,66 @@
               ]
             }
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/m4rc3l/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/@feel/style/global"
+              ]
+            },
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "m4rc3l:build:development",
+              "serverTarget": "m4rc3l:server:development"
+            },
+            "production": {
+              "browserTarget": "m4rc3l:build:production",
+              "serverTarget": "m4rc3l:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "m4rc3l:build:production",
+              "serverTarget": "m4rc3l:server:production"
+            },
+            "development": {
+              "browserTarget": "m4rc3l:build:development",
+              "serverTarget": "m4rc3l:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

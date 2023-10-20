@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { NotenRoutingModule } from './noten-routing.module';
-import { NotenComponent } from './noten.component';
+import {NotenRoutingModule} from './noten-routing.module';
+import {NotenComponent} from './noten.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {TextFieldComponent} from "@feel/form";
 
@@ -11,11 +11,12 @@ import {TextFieldComponent} from "@feel/form";
   declarations: [
     NotenComponent
   ],
-    imports: [
-        CommonModule,
-        NotenRoutingModule,
-        ReactiveFormsModule,
-        TextFieldComponent
-    ]
+  imports: [
+    CommonModule,
+    NotenRoutingModule,
+    ReactiveFormsModule,
+    TextFieldComponent
+  ]
 })
-export class NotenModule { }
+export class NotenModule {
+}

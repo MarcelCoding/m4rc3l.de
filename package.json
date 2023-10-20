@@ -1,12 +1,17 @@
 {
   "name": "m4rc3l",
   "version": "0.0.0",
+  "packageManager": "pnpm@8.9.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev:ssr": "ng run m4rc3l:serve-ssr",
+    "serve:ssr": "node dist/m4rc3l/server/main.js",
+    "build:ssr": "ng build && ng run m4rc3l:server",
+    "prerender": "ng run m4rc3l:prerender"
   },
   "private": true,
   "dependencies": {
@@ -17,11 +22,14 @@
     "@angular/forms": "^16.2.6",
     "@angular/platform-browser": "^16.2.6",
     "@angular/platform-browser-dynamic": "^16.2.6",
+    "@angular/platform-server": "^16.2.6",
     "@angular/router": "^16.2.6",
     "@feel/form": "^0.0.5",
     "@feel/style": "^0.0.5",
     "@fontsource/dm-mono": "^5.0.12",
     "@fontsource/dm-sans": "^5.0.12",
+    "@nguniversal/express-engine": "^16.2.0",
+    "express": "^4.15.2",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
     "zone.js": "~0.13.3"
@@ -30,7 +38,10 @@
     "@angular-devkit/build-angular": "^16.2.3",
     "@angular/cli": "~16.2.3",
     "@angular/compiler-cli": "^16.2.6",
+    "@nguniversal/builders": "^16.2.0",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~4.3.6",
+    "@types/node": "^18.18.3",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
